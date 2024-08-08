@@ -1,5 +1,5 @@
-// src/firebase.ts
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 // Tu configuración de Firebase usando variables de entorno
 const firebaseConfig = {
@@ -13,4 +13,9 @@ const firebaseConfig = {
 
 // Inicializa Firebase
 const appFirebase = initializeApp(firebaseConfig);
-export default appFirebase;
+
+// Inicializa la autenticación
+const auth = getAuth(appFirebase);
+
+// Exporta la instancia de Firebase y la autenticación
+export { appFirebase, auth };

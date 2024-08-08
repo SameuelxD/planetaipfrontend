@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import appFirebase from './firebase';
-import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState, AppDispatch } from './redux/store';
+import { setUser } from './redux/userSlice';
+import { auth } from './firebase';  // Asegúrate de que esto coincida con la exportación
+import { onAuthStateChanged } from 'firebase/auth';
 import './App.css';
-import Home from './components/Home';
-import SignIn from './components/SignIn';
-
-const auth = getAuth(appFirebase);
+import HomePage from './components/pages/HomePage';
+import SignInPage from './components/pages/SignInPage';
 
 function App() {
-  const [user, setUser] = useState<User | null>(null);
+  const dispatch = useDispatch<AppDispatch>();
+  const user = useSelector((state: RootState) => state.user.user);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (userFirebase) => {
-      if (userFirebase) {
-        setUser(userFirebase);
-      } else {
-        setUser(null);
-      }
+      dispatch(setUser(userFirebase));
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
-      {user ? <Home userEmail = {user.email} /> : <SignIn />}
+      {user ? <HomePage /> : <SignInPage />}
     </div>
   );
 }
