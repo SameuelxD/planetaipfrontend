@@ -1,7 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
-// Tu configuración de Firebase usando variables de entorno
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -13,9 +12,7 @@ const firebaseConfig = {
 
 // Inicializa Firebase
 const appFirebase = initializeApp(firebaseConfig);
-
-// Inicializa la autenticación
 const auth = getAuth(appFirebase);
 
-// Exporta la instancia de Firebase y la autenticación
-export { appFirebase, auth };
+export { auth };
+export default appFirebase;
