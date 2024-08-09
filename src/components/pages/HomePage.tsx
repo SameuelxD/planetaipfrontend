@@ -35,6 +35,14 @@ interface User {
   bio: string;
 }
 
+// Helper function to highlight search terms
+const highlightText = (text: string, searchTerm: string) => {
+  if (!searchTerm.trim()) return text;
+
+  const regex = new RegExp(`(${searchTerm.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi');
+  return text.replace(regex, (match) => `<mark>${match}</mark>`);
+};
+
 // Main component
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();
@@ -107,10 +115,16 @@ const HomePage: React.FC = () => {
 
   const filteredPosts = posts.filter(post => {
     const lowercasedTerm = searchTerm.toLowerCase();
+    const postComments = Object.values(post.comments);
+    
     return (
       post.postText.toLowerCase().includes(lowercasedTerm) ||
       post.userName.toLowerCase().includes(lowercasedTerm) ||
-      post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm))
+      post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm)) ||
+      postComments.some(comment => 
+        comment.text.toLowerCase().includes(lowercasedTerm) ||
+        comment.userName.toLowerCase().includes(lowercasedTerm)
+      )
     );
   });
 
@@ -153,12 +167,12 @@ const HomePage: React.FC = () => {
           <div key={index} className="post-container">
             <div className="post-header">
               <img src={post.userPhoto} alt={post.userName} className="user-photo" />
-              <span className="user-name">{post.userName}</span>
+              <span className="user-name" dangerouslySetInnerHTML={{ __html: highlightText(post.userName, searchTerm) }} />
             </div>
             {post.postImage && <img src={post.postImage} alt="Post" className="post-image" />}
-            <p className="post-text">{post.postText}</p>
+            <p className="post-text" dangerouslySetInnerHTML={{ __html: highlightText(post.postText, searchTerm) }} />
             <div className="post-footer">
-              <span className="tags">{post.tags.join(', ')}</span>
+              <span className="tags">{post.tags.map(tag => highlightText(tag, searchTerm)).join(', ')}</span>
               <span className="likes">Likes: {post.likes}</span>
               <span className="comments">Comments: {Object.keys(post.comments).length}</span>
             </div>
@@ -170,8 +184,8 @@ const HomePage: React.FC = () => {
                     <div key={commentId} className="comment">
                       <img src={comment.userPhoto} alt={comment.userName} className="comment-user-photo" />
                       <div className="comment-info">
-                        <h4>{comment.userName}</h4>
-                        <p>{comment.text}</p>
+                        <h4 dangerouslySetInnerHTML={{ __html: highlightText(comment.userName, searchTerm) }} />
+                        <p dangerouslySetInnerHTML={{ __html: highlightText(comment.text, searchTerm) }} />
                       </div>
                     </div>
                   );
