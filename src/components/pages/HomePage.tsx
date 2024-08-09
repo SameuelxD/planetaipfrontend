@@ -27,18 +27,28 @@ interface Post {
   comments: Record<string, Comment>;
 }
 
+interface User {
+  userId: string;
+  userName: string;
+  userPhoto: string;
+  email: string;
+  bio: string;
+}
+
 // Main component
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();
   const [posts, setPosts] = useState<Post[]>([]);
+  const [users, setUsers] = useState<Record<string, User>>({});
   const [searchTerm, setSearchTerm] = useState('');
   const [menuVisible, setMenuVisible] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
     const postsRef = ref(database, 'posts/');
+    const usersRef = ref(database, 'users/');
     
-    const handleData = (snapshot: any) => {
+    const handlePostsData = (snapshot: any) => {
       const data = snapshot.val() || {};
       const postsArray: Post[] = Object.keys(data).map(key => ({
         userId: data[key].userId,
@@ -53,8 +63,18 @@ const HomePage: React.FC = () => {
       setPosts(postsArray);
     };
 
-    const unsubscribe = onValue(postsRef, handleData);
-    return () => unsubscribe();
+    const handleUsersData = (snapshot: any) => {
+      const data = snapshot.val() || {};
+      setUsers(data);
+    };
+
+    const postsUnsubscribe = onValue(postsRef, handlePostsData);
+    const usersUnsubscribe = onValue(usersRef, handleUsersData);
+
+    return () => {
+      postsUnsubscribe();
+      usersUnsubscribe();
+    };
   }, []);
 
   const handleLogout = async () => {
@@ -85,14 +105,17 @@ const HomePage: React.FC = () => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredPosts = posts.filter(post =>
-    post.postText.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const filteredPosts = posts.filter(post => {
+    const lowercasedTerm = searchTerm.toLowerCase();
+    return (
+      post.postText.toLowerCase().includes(lowercasedTerm) ||
+      post.userName.toLowerCase().includes(lowercasedTerm) ||
+      post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm))
+    );
+  });
 
   const toggleMenu = () => setMenuVisible(prev => !prev);
 
-  // Open modal and handle user profile
   const handleViewProfile = () => {
     setModalIsOpen(true);
   };
@@ -173,7 +196,6 @@ const HomePage: React.FC = () => {
           <p><strong>Nombre:</strong> {auth.currentUser?.displayName || 'No disponible'}</p>
           <p><strong>Email:</strong> {auth.currentUser?.email || 'No disponible'}</p>
           <p><strong>UID:</strong> {auth.currentUser?.uid || 'No disponible'}</p>
-          {/* Agrega más información si es necesario */}
         </div>
         <button onClick={closeModal} className="close-modal-button">Cerrar</button>
       </Modal>
