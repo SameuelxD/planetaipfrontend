@@ -1,4 +1,3 @@
-/* Contenedor principal */
 .login-container {
   min-height: 100vh;
   display: flex;
@@ -11,7 +10,6 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Imagen del logo */
 .login-image {
   width: 100px;
   height: 100px;
@@ -21,7 +19,6 @@
   border: 2px solid var(--text-color);
 }
 
-/* Título */
 .login-title {
   margin-bottom: 20px;
   font-size: 24px;
@@ -29,7 +26,6 @@
   color: var(--text-color);
 }
 
-/* Formulario de inicio de sesión */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -41,14 +37,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Etiquetas del formulario */
 .login-label {
   margin-bottom: 5px;
   font-size: 14px;
   color: var(--text-color);
 }
 
-/* Campos de entrada del formulario */
 .login-input {
   margin-bottom: 15px;
   padding: 10px;
@@ -59,7 +53,6 @@
   font-size: 14px;
 }
 
-/* Botón de inicio de sesión */
 .login-button {
   padding: 10px;
   border: none;
@@ -79,7 +72,6 @@
   background-color: var(--button-active-background-color);
 }
 
-/* Contenedor de inicio de sesión social */
 .social-login-container {
   display: flex;
   flex-direction: column;
@@ -87,7 +79,6 @@
   margin-top: 20px;
 }
 
-/* Etiqueta para los íconos sociales */
 .social-login-label {
   font-size: 14px;
   font-weight: 600;
@@ -95,15 +86,13 @@
   color: var(--text-color);
 }
 
-/* Contenedor de los íconos sociales */
 .social-login-icons {
   display: flex;
-  gap: 15px; /* Espacio entre los logos */
+  gap: 15px;
 }
 
-/* Estilo de los logos sociales */
 .social-login-logo {
-  width: 48px; /* Tamaño consistente para los logos */
+  width: 48px;
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
@@ -112,11 +101,10 @@
 }
 
 .social-login-logo:hover {
-  opacity: 0.8; /* Efecto de hover */
-  transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
-/* Variables de color predeterminadas */
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
@@ -130,7 +118,6 @@
   --form-background-color: #ffffff;
 }
 
-/* Estilos para el modo oscuro */
 .dark-mode {
   --background-color: #1f1f1f;
   --text-color: #eaeaea;

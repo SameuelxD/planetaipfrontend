@@ -1,0 +1,144 @@
+{
+  "users": {
+    "user1": {
+      "userId": "1",
+      "userName": "John Doe",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genb45ec8144380b8ad273e3256289902fd.jpg",
+      "email": "john.doe@example.com",
+      "bio": "Entusiasta de la política. Amante de los debates y las noticias."
+    },
+    "user2": {
+      "userId": "2",
+      "userName": "Jane Smith",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genf9e6431f1098207985f6dd8498116b46.jpg",
+      "email": "jane.smith@example.com",
+      "bio": "Apasionada del fútbol y las noticias deportivas. ¡Vamos equipo!"
+    },
+    "user3": {
+      "userId": "3",
+      "userName": "Alice Johnson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8951a5d59d7b62c054af7ead6c0f247a.jpg",
+      "email": "alice.johnson@example.com",
+      "bio": "Fanática del cine y de todo lo relacionado con Marvel."
+    },
+    "user4": {
+      "userId": "4",
+      "userName": "Michael Brown",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene620e17f25ed6164c1cfd7d877e00619.jpg",
+      "email": "michael.brown@example.com",
+      "bio": "Interesado en la política y las noticias internacionales."
+    },
+    "user5": {
+      "userId": "5",
+      "userName": "Emily Davis",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen020f764bb198cbdb35a8e164c293e7d4.jpg",
+      "email": "emily.davis@example.com",
+      "bio": "Apasionada por el cambio social y la política."
+    },
+    "user6": {
+      "userId": "6",
+      "userName": "David Wilson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene8a556ff7825e573edac5f018e2cac98.jpg",
+      "email": "david.wilson@example.com",
+      "bio": "Futbolero de corazón. Siempre en busca de noticias deportivas."
+    },
+    "user7": {
+      "userId": "7",
+      "userName": "Sophia Martinez",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen841edd2024216a6064de82e3b39a66ac.jpg",
+      "email": "sophia.martinez@example.com",
+      "bio": "Amante del fútbol y los grandes partidos."
+    },
+    "user8": {
+      "userId": "8",
+      "userName": "John Williams",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen297562e52c704763e68713262c35027b.jpg",
+      "email": "john.williams@example.com",
+      "bio": "Fan de las películas de Marvel y el cine en general."
+    },
+    "user9": {
+      "userId": "9",
+      "userName": "Olivia Taylor",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen017610d72ed19cf41445248f637e3a93.jpg",
+      "email": "olivia.taylor@example.com",
+      "bio": "Apasionada por las sorpresas de Marvel y el cine."
+    }
+  },
+  "posts": {
+    "post1": {
+      "userId": "1",
+      "userName": "John Doe",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genb45ec8144380b8ad273e3256289902fd.jpg",
+      "postImage": "https://fotografias.lasexta.com/clipping/cmsimages02/2024/07/18/94D59A85-2A88-49A7-B447-94321C1307D1/98.jpg?crop=3000,1688,x0,y264&width=1900&height=1069&optimize=low&format=webply",
+      "postText": "Biden está decidido a seguir en la carrera presidencial pese a presiones, según su campaña",
+      "tags": ["politica", "noticias"],
+      "likes": 123,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "4",
+          "userName": "Michael Brown",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene620e17f25ed6164c1cfd7d877e00619.jpg",
+          "text": "Interesante perspectiva. Espero que pueda manejar las presiones."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "5",
+          "userName": "Emily Davis",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen020f764bb198cbdb35a8e164c293e7d4.jpg",
+          "text": "No creo que sea una buena idea. Necesitamos un cambio."
+        }
+      }
+    },
+    "post2": {
+      "userId": "2",
+      "userName": "Jane Smith",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genf9e6431f1098207985f6dd8498116b46.jpg",
+      "postImage": "https://files.antena2.com/antena2/public/styles/imagen_despliegue/public/2024-08/ColombiaArgentina.jpg.webp?VersionId=PGTFIN6zPUo5FyZl_lDwnUnktrsB7puo&itok=HfJUvDx1",
+      "postText": "Argentina tomó decisión con Colombia para Eliminatorias: es un hecho",
+      "tags": ["entretenimiento", "deportes"],
+      "likes": 456,
+      "comments": {
+        "comment1": {
+          "commentId": "2",
+          "userId": "6",
+          "userName": "David Wilson",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene8a556ff7825e573edac5f018e2cac98.jpg",
+          "text": "Excelente noticia para el fútbol sudamericano."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "7",
+          "userName": "Sophia Martinez",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen841edd2024216a6064de82e3b39a66ac.jpg",
+          "text": "¡Espero que sea un gran partido!"
+        }
+      }
+    },
+    "post3": {
+      "userId": "3",
+      "userName": "Alice Johnson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8951a5d59d7b62c054af7ead6c0f247a.jpg",
+      "postImage": "https://www.cinemascomics.com/wp-content/uploads/2012/07/Iron-Man-3.jpg",
+      "postText": "Películas Marvel: Así iba a ser el cameo de Robert Downey Jr. como Iron Man en Deadpool & Wolverine",
+      "tags": ["entretenimiento", "farandula"],
+      "likes": 789,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "8",
+          "userName": "John Williams",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen297562e52c704763e68713262c35027b.jpg",
+          "text": "Eso habría sido increíble. ¡Me encantaría ver esa escena!"
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "9",
+          "userName": "Olivia Taylor",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen017610d72ed19cf41445248f637e3a93.jpg",
+          "text": "Marvel siempre tiene sorpresas. Estoy ansiosa por la próxima película."
+        }
+      }
+    }
+  }
+}
