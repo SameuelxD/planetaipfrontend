@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useDispatch } from 'react-redux';
@@ -8,12 +9,26 @@ const HomePage: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      dispatch(clearUser()); 
-      console.log('Usuario desconectado');
-    } catch (error) {
-      console.error('Error al cerrar sesión:', error);
+    const result = await Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¡Se cerrará la sesión!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#007bff',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, cerrar sesión',
+      cancelButtonText: 'Cancelar'
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await signOut(auth);
+        dispatch(clearUser()); 
+        Swal.fire('Desconectado', 'Has cerrado sesión con éxito.', 'success');
+      } catch (error) {
+        console.error('Error al cerrar sesión:', error);
+        Swal.fire('Error', 'No se pudo cerrar sesión. Intenta nuevamente.', 'error');
+      }
     }
   };
 
