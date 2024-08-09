@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, OAuthProvider } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import { auth } from '../../firebase';
 import './SignInPage.css';
@@ -60,6 +60,30 @@ const SignInPage: React.FC<SignInPageProps> = ({ onLoginSuccess }) => {
     }
   };
 
+  const handleGitHubLogin = async () => {
+    const provider = new OAuthProvider('github.com');
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      onLoginSuccess(user);
+      Swal.fire({
+        title: 'Éxito',
+        text: 'Inicio de sesión exitoso con GitHub',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+      Swal.fire({
+        title: 'Error',
+        text: `Error de autenticación: ${errorMessage}`,
+        icon: 'error',
+        confirmButtonText: 'Aceptar'
+      });
+    }
+  };
+
   return (
     <div className="login-container">
       <img
@@ -89,14 +113,22 @@ const SignInPage: React.FC<SignInPageProps> = ({ onLoginSuccess }) => {
         />
         <button className="login-button" type="submit">Iniciar sesión</button>
       </form>
-      <div className="google-login-container">
-        <div className="google-login-label">Iniciar sesión con</div>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQExly8Xk3GWUOkmUGETvVobduKHck3ivnVA&s"
-          alt="Google logo"
-          onClick={handleGoogleLogin}
-          className="google-login-logo"
-        />
+      <div className="social-login-container">
+        <div className="social-login-label">Iniciar sesión con</div>
+        <div className="social-login-icons">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQExly8Xk3GWUOkmUGETvVobduKHck3ivnVA&s"
+            alt="Google logo"
+            onClick={handleGoogleLogin}
+            className="social-login-logo"
+          />
+          <img
+            src="https://w7.pngwing.com/pngs/914/758/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png"
+            alt="GitHub logo"
+            onClick={handleGitHubLogin}
+            className="social-login-logo"
+          />
+        </div>
       </div>
     </div>
   );

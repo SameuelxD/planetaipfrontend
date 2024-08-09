@@ -1,3 +1,4 @@
+/* Contenedor principal */
 .login-container {
   min-height: 100vh;
   display: flex;
@@ -7,20 +8,20 @@
   padding: 20px;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
-
+/* Imagen del logo */
 .login-image {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
-  object-fit: cover; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
-  border: 2px solid var(--text-color); 
+  border: 2px solid var(--text-color);
 }
 
-
+/* Título */
 .login-title {
   margin-bottom: 20px;
   font-size: 24px;
@@ -28,24 +29,26 @@
   color: var(--text-color);
 }
 
-
+/* Formulario de inicio de sesión */
 .login-form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 400px;
-  background-color: var(--form-background-color); 
+  background-color: var(--form-background-color);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Etiquetas del formulario */
 .login-label {
   margin-bottom: 5px;
   font-size: 14px;
   color: var(--text-color);
 }
 
+/* Campos de entrada del formulario */
 .login-input {
   margin-bottom: 15px;
   padding: 10px;
@@ -56,7 +59,7 @@
   font-size: 14px;
 }
 
-
+/* Botón de inicio de sesión */
 .login-button {
   padding: 10px;
   border: none;
@@ -65,7 +68,7 @@
   color: var(--button-text-color);
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
 }
 
 .login-button:hover {
@@ -76,34 +79,44 @@
   background-color: var(--button-active-background-color);
 }
 
-
-.google-login-container {
+/* Contenedor de inicio de sesión social */
+.social-login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  cursor: pointer;
 }
 
-.google-login-label {
+/* Etiqueta para los íconos sociales */
+.social-login-label {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text-color);
 }
 
-.google-login-logo {
-  width: 48px; 
-  height: 48px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  transition: opacity 0.3s; 
+/* Contenedor de los íconos sociales */
+.social-login-icons {
+  display: flex;
+  gap: 15px; /* Espacio entre los logos */
 }
 
-.google-login-logo:hover {
-  opacity: 0.8; 
+/* Estilo de los logos sociales */
+.social-login-logo {
+  width: 48px; /* Tamaño consistente para los logos */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
+.social-login-logo:hover {
+  opacity: 0.8; /* Efecto de hover */
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+}
+
+/* Variables de color predeterminadas */
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
@@ -114,9 +127,10 @@
   --button-text-color: #ffffff;
   --button-hover-background-color: #0056b3;
   --button-active-background-color: #004080;
-  --form-background-color: #ffffff; 
+  --form-background-color: #ffffff;
 }
 
+/* Estilos para el modo oscuro */
 .dark-mode {
   --background-color: #1f1f1f;
   --text-color: #eaeaea;
@@ -127,5 +141,5 @@
   --button-text-color: #ffffff;
   --button-hover-background-color: #0f66d4;
   --button-active-background-color: #0d5bb0;
-  --form-background-color: #2c2c2c; 
+  --form-background-color: #2c2c2c;
 }
