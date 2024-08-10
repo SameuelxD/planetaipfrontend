@@ -62,6 +62,97 @@
       "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen017610d72ed19cf41445248f637e3a93.jpg",
       "email": "olivia.taylor@example.com",
       "bio": "Apasionada por las sorpresas de Marvel y el cine."
+    },
+    "user10": {
+      "userId": "10",
+      "userName": "Sophia Adams",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen69b2c7ad56fccbe7abfb26f4a2b82c86.jpg",
+      "email": "sophia.adams@example.com",
+      "bio": "Interesada en la educación y el aprendizaje de nuevos idiomas."
+    },
+    "user11": {
+      "userId": "11",
+      "userName": "Michael Alvarez",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen0a57b853b862503046ce9c8c38970c0d.jpg",
+      "email": "michael.alvarez@example.com",
+      "bio": "Amante del cine y las noticias."
+    },
+    "user12": {
+      "userId": "12",
+      "userName": "Nanci Arboleda",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen6b9bdd2a75986afc9ece38173826d5dc.jpg",
+      "email": "nanci.arboleda@example.com",
+      "bio": "Fanática del entretenimiento y las películas."
+    },
+    "user13": {
+      "userId": "13",
+      "userName": "Maria Garcia",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen00ce9540f926edcd2ca550c975ceae5c.jpg",
+      "email": "maria.garcia@example.com",
+      "bio": "Aficionada a los viajes y el turismo."
+    },
+    "user14": {
+      "userId": "14",
+      "userName": "Dani Brown",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7d4cfdabaefa1e169d66ddfe5b008198.jpg",
+      "email": "dani.brown@example.com",
+      "bio": "Interesada en los destinos turísticos y la planificación de viajes."
+    },
+    "user15": {
+      "userId": "15",
+      "userName": "Isabella Scott",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7f02a2a02b6f46121f161ef20ede876a.jpg",
+      "email": "isabella.scott@example.com",
+      "bio": "Apasionada de la salud mental y el bienestar."
+    },
+    "user16": {
+      "userId": "16",
+      "userName": "Lucas Thompson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen6f2f32373cd507c06d51ea27c8e50ff1.jpg",
+      "email": "lucas.thompson@example.com",
+      "bio": "Interesado en moda y estilo."
+    },
+    "user17": {
+      "userId": "17",
+      "userName": "Daniel Green",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8534a5433aa562d01b511a05d0710b68.jpg",
+      "email": "daniel.green@example.com",
+      "bio": "Aficionado a las finanzas y las criptomonedas."
+    },
+    "user18": {
+      "userId": "18",
+      "userName": "Ava Lee",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
+      "email": "ava.lee@example.com",
+      "bio": "Interesada en el mundo de las criptomonedas y las inversiones."
+    },
+    "user19": {
+      "userId": "19",
+      "userName": "Mia Clark",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen9994c9188aab417f533c1d8918507379.jpg",
+      "email": "mia.clark@example.com",
+      "bio": "Entusiasta de la fotografía y el arte."
+    },
+    "user20": {
+      "userId": "20",
+      "userName": "Noah Wright",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen366e96d46f3e6e8ce732dd10da5748b7.jpg",
+      "email": "noah.wright@example.com",
+      "bio": "Apasionado de la fotografía y el arte visual."
+    },
+    "user21": {
+      "userId": "21",
+      "userName": "Ethan Johnson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen5aef0537ec09d584a9fba179a9cb441f.jpg",
+      "email": "ethan.johnson@example.com",
+      "bio": "Interesado en aprender nuevos idiomas y educación."
+    },
+    "user22": {
+      "userId": "22",
+      "userName": "Daniel Robinson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen4d441a43cb4b5598f7d63d44b8aa792",
+      "email": "daniel@example.com",
+      "bio": "Apasionado por los idiomas."
     }
   },
   "posts": {
@@ -71,7 +162,10 @@
       "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genb45ec8144380b8ad273e3256289902fd.jpg",
       "postImage": "https://fotografias.lasexta.com/clipping/cmsimages02/2024/07/18/94D59A85-2A88-49A7-B447-94321C1307D1/98.jpg?crop=3000,1688,x0,y264&width=1900&height=1069&optimize=low&format=webply",
       "postText": "Biden está decidido a seguir en la carrera presidencial pese a presiones, según su campaña",
-      "tags": ["politica", "noticias"],
+      "tags": [
+        "politica",
+        "noticias"
+      ],
       "likes": 123,
       "comments": {
         "comment1": {
@@ -96,11 +190,14 @@
       "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genf9e6431f1098207985f6dd8498116b46.jpg",
       "postImage": "https://files.antena2.com/antena2/public/styles/imagen_despliegue/public/2024-08/ColombiaArgentina.jpg.webp?VersionId=PGTFIN6zPUo5FyZl_lDwnUnktrsB7puo&itok=HfJUvDx1",
       "postText": "Argentina tomó decisión con Colombia para Eliminatorias: es un hecho",
-      "tags": ["entretenimiento", "deportes"],
+      "tags": [
+        "entretenimiento",
+        "deportes"
+      ],
       "likes": 456,
       "comments": {
         "comment1": {
-          "commentId": "2",
+          "commentId": "1",
           "userId": "6",
           "userName": "David Wilson",
           "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene8a556ff7825e573edac5f018e2cac98.jpg",
@@ -121,7 +218,10 @@
       "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8951a5d59d7b62c054af7ead6c0f247a.jpg",
       "postImage": "https://www.cinemascomics.com/wp-content/uploads/2012/07/Iron-Man-3.jpg",
       "postText": "Películas Marvel: Así iba a ser el cameo de Robert Downey Jr. como Iron Man en Deadpool & Wolverine",
-      "tags": ["entretenimiento", "farandula"],
+      "tags": [
+        "entretenimiento",
+        "farandula"
+      ],
       "likes": 789,
       "comments": {
         "comment1": {
@@ -137,6 +237,189 @@
           "userName": "Olivia Taylor",
           "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen017610d72ed19cf41445248f637e3a93.jpg",
           "text": "Marvel siempre tiene sorpresas. Estoy ansiosa por la próxima película."
+        }
+      }
+    },
+    "post4": {
+      "userId": "4",
+      "userName": "Michael Brown",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene620e17f25ed6164c1cfd7d877e00619.jpg",
+      "postImage": "https://estaticos.elcolombiano.com/binrepository/848x565/68c0/780d565/none/11101/MRLU/tdw-20105-r_45749586_20240804162648.jpg",
+      "postText": "Deadpool & Wolverine sigue destrozando los récords de taquilla en el mundo",
+      "tags": [
+        "entretenimiento",
+        "farandula"
+      ],
+      "likes": 509,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "11",
+          "userName": "Michael Alvarez",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen0a57b853b862503046ce9c8c38970c0d.jpg",
+          "text": "Woow quien lo diria marvel una vez mas en el ojo"
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "12",
+          "userName": "Nanci Arboleda",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen6b9bdd2a75986afc9ece38173826d5dc.jpg",
+          "text": "Marvel clasico de clasicos"
+        }
+      }
+    },
+    "post5": {
+      "userId": "5",
+      "userName": "Emily Davis",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen020f764bb198cbdb35a8e164c293e7d4.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyceb7TEIlZ0cidBmzMzQfgjgwmUtYpWIuPA&s",
+      "postText": "Explorando los mejores destinos turísticos para vacaciones en Europa.",
+      "tags": [
+        "viajes",
+        "turismo"
+      ],
+      "likes": 421,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "16",
+          "userName": "Lucas Thompson",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen6f2f32373cd507c06d51ea27c8e50ff1.jpg",
+          "text": "¡Gran lista! Europa tiene muchos lugares maravillosos para visitar."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "17",
+          "userName": "Daniel Green",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8534a5433aa562d01b511a05d0710b68.jpg",
+          "text": "Gracias por las recomendaciones. Estoy planeando mi próximo viaje."
+        }
+      }
+    },
+    "post6": {
+      "userId": "6",
+      "userName": "David Wilson",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gene8a556ff7825e573edac5f018e2cac98.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX_dfq9WowgY6H2u9q4yHO4yVMgkUBgGjYkQ&s",
+      "postText": "Tendencias en moda para este otoño: lo último en ropa y accesorios.",
+      "tags": [
+        "moda",
+        "estilo"
+      ],
+      "likes": 832,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "18",
+          "userName": "Ava Lee",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
+          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVk7iSTR3maFjxm2VBQRm3MIOfc4WJAgfKQw&s",
+          "postText": "Cómo mejorar tu salud mental: consejos prácticos y efectivos.",
+          "tags": [
+            "salud",
+            "bienestar"
+          ],
+          "likes": 590,
+          "comments": {
+            "comment1": {
+              "commentId": "1",
+              "userId": "20",
+              "userName": "Isabella Scott",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7f02a2a02b6f46121f161ef20ede876a.jpg",
+              "text": "Muy útil. Siempre es bueno tener estrategias para cuidar nuestra salud mental."
+            },
+            "comment2": {
+              "commentId": "2",
+              "userId": "21",
+              "userName": "Danna Wilson",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen63cb16d668b8c7c84a755fc3a4450b7b.jpg",
+              "text": "Gracias por compartir estos consejos. Los pondré en práctica."
+            }
+          }
+        },
+        "post8": {
+          "userId": "8",
+          "userName": "Vanessa Martinez",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7089e47bdf8a78cedde09ff97f723f0a.jpg",
+          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrNNiyIrNNjPslLaMGeyce_BOj_ccmXsy7w&s",
+          "postText": "Las mejores estrategias para invertir en criptomonedas en 2024.",
+          "tags": [
+            "finanzas",
+            "criptomonedas"
+          ],
+          "likes": 903,
+          "comments": {
+            "comment1": {
+              "commentId": "1",
+              "userId": "22",
+              "userName": "Daniel Green",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8534a5433aa562d01b511a05d0710b68.jpg",
+              "text": "Muy interesante. Estoy buscando formas de diversificar mi cartera de inversiones."
+            },
+            "comment2": {
+              "commentId": "2",
+              "userId": "23",
+              "userName": "Ava Lee",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
+              "text": "Gracias por la información. Consideraré invertir en criptomonedas."
+            }
+          }
+        },
+        "post9": {
+          "userId": "9",
+          "userName": "Liam Harris",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gena9137af94498a7db3285c53c5bd8adf2.jpg",
+          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIY2E0QMsFvZMm3T76DOfLXs7Lz65Jht3rQ&s",
+          "postText": "Cómo mejorar tus habilidades de fotografía con consejos simples.",
+          "tags": [
+            "fotografía",
+            "arte"
+          ],
+          "likes": 654,
+          "comments": {
+            "comment1": {
+              "commentId": "1",
+              "userId": "24",
+              "userName": "Mia Clark",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen9994c9188aab417f533c1d8918507379.jpg",
+              "text": "Muy buenos consejos. Estoy tratando de mejorar mis habilidades de fotografía."
+            },
+            "comment2": {
+              "commentId": "2",
+              "userId": "25",
+              "userName": "Noah Wright",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen366e96d46f3e6e8ce732dd10da5748b7.jpg",
+              "text": "Gracias por los tips. Me han sido muy útiles."
+            }
+          }
+        },
+        "post10": {
+          "userId": "10",
+          "userName": "Sophia Adams",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen69b2c7ad56fccbe7abfb26f4a2b82c86.jpg",
+          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwrtkLhYFA-OXO0JFalcC7mSFFmVEJKYs5Q&s",
+          "postText": "Las mejores técnicas para aprender un nuevo idioma rápidamente.",
+          "tags": [
+            "idiomas",
+            "educación"
+          ],
+          "likes": 732,
+          "comments": {
+            "comment1": {
+              "commentId": "1",
+              "userId": "26",
+              "userName": "Ethan Johnson",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen5aef0537ec09d584a9fba179a9cb441f.jpg",
+              "text": "¡Gran información! Estoy buscando métodos efectivos para aprender francés."
+            },
+            "comment2": {
+              "commentId": "2",
+              "userId": "27",
+              "userName": "Daniel Robinson",
+              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen4d441a43cb4b5598f1bc241c4121a906.jpg",
+              "text": "Gracias por estos consejos. Me ayudarán mucho en mi aprendizaje."
+            }
+          }
         }
       }
     }
