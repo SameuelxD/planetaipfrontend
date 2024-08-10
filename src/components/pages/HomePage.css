@@ -1,4 +1,3 @@
-/* Base styles */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -10,39 +9,55 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between; /* Espacio entre los elementos */
+  padding: 15px 20px;
   background-color: var(--header-background-color);
   border-bottom: 1px solid var(--border-color);
   position: relative;
 }
 
-.profile-controls {
+.header-inner {
   display: flex;
   align-items: center;
+  width: 100%; 
+  max-width: 1200px; 
+  justify-content: center; 
+  position: relative;
 }
 
 .search-bar {
-  flex: 1;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 500px; 
 }
 
 .search-input {
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 20px;
   border: 1px solid var(--border-color);
   background-color: var(--input-background-color);
   color: var(--input-text-color);
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.filter-icon {
+  font-size: 32px; 
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 10px; 
+}
+
+.profile-controls {
+  display: flex; 
+  align-items: center; 
 }
 
 .profile-photo {
-  width: 40px;
-  height: 40px;
+  width: 50px; 
+  height: 50px; 
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -69,16 +84,24 @@
 }
 
 .profile-menu-item {
-  padding: 10px 20px;
+  padding: 12px 20px; 
   border: none;
   background: none;
   text-align: left;
   cursor: pointer;
   color: var(--text-color);
+  font-size: 16px; 
 }
 
 .profile-menu-item:hover {
   background-color: var(--menu-item-hover-background-color);
+}
+
+.home-icon {
+  font-size: 32px; 
+  color: var(--text-color);
+  cursor: pointer;
+  margin-right: 20px; 
 }
 
 .posts-container {
@@ -88,36 +111,42 @@
 }
 
 .post-container {
-  margin-bottom: 20px;
+  margin-bottom: 30px; 
   background-color: var(--form-background-color);
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  padding: 20px; 
 }
 
 .post-header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px; 
 }
 
 .user-photo {
-  width: 40px;
-  height: 40px;
+  width: 60px; 
+  height: 60px; 
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px; 
   object-fit: cover;
+}
+
+.user-name {
+  font-size: 20px; 
+  font-weight: bold;
 }
 
 .post-image {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .post-text {
-  margin: 10px 0;
+  margin: 15px 0;
+  font-size: 18px;
 }
 
 .mark {
@@ -135,25 +164,25 @@
 .post-footer {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 16px; 
   color: var(--text-color);
 }
 
 .comments-section {
-  margin-top: 10px;
+  margin-top: 20px; 
 }
 
 .comment {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: flex-start; 
+  margin-bottom: 20px; 
 }
 
 .comment-user-photo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px; 
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
   object-fit: cover;
 }
 
@@ -164,12 +193,13 @@
 
 .comment-info h4 {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .comment-info p {
-  margin: 0;
-  font-size: 12px;
+  margin: 5px 0;
+  font-size: 16px; 
   color: var(--comment-text-color);
 }
 
@@ -201,7 +231,7 @@
   background-color: var(--button-background-color);
   border: none;
   color: var(--button-text-color);
-  padding: 10px 20px;
+  padding: 12px 24px; 
   border-radius: 5px;
   cursor: pointer;
   position: absolute;

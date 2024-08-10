@@ -3,12 +3,13 @@ import Modal from 'react-modal';
 import Swal from 'sweetalert2';
 import { signOut } from 'firebase/auth';
 import { auth, database } from '../../firebase';
-import { ref, onValue } from 'firebase/database'; 
+import { ref, onValue } from 'firebase/database';
 import { useDispatch } from 'react-redux';
 import { clearUser } from '../../redux/userSlice';
 import './HomePage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter, faHome } from '@fortawesome/free-solid-svg-icons';
 
-// Define interfaces
 interface Comment {
   userId: string;
   userName: string;
@@ -35,7 +36,8 @@ interface User {
   bio: string;
 }
 
-// Helper function to highlight search terms
+Modal.setAppElement('#root');
+
 const highlightText = (text: string, searchTerm: string) => {
   if (!searchTerm.trim()) return text;
 
@@ -51,6 +53,9 @@ const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [menuVisible, setMenuVisible] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [filterModalIsOpen, setFilterModalIsOpen] = useState(false);
+  const [availableTags, setAvailableTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
     const postsRef = ref(database, 'posts/');
@@ -68,6 +73,10 @@ const HomePage: React.FC = () => {
         likes: data[key].likes || 0,
         comments: data[key].comments || {}
       }));
+
+      const tags = new Set<string>();
+      postsArray.forEach(post => post.tags.forEach(tag => tags.add(tag)));
+      setAvailableTags(Array.from(tags));
       setPosts(postsArray);
     };
 
@@ -113,46 +122,55 @@ const HomePage: React.FC = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleTagChange = (tag: string) => {
+    setSelectedTags(prev => 
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    );
+  };
+
   const filteredPosts = posts.filter(post => {
     const lowercasedTerm = searchTerm.toLowerCase();
     const postComments = Object.values(post.comments);
     
     return (
-      post.postText.toLowerCase().includes(lowercasedTerm) ||
-      post.userName.toLowerCase().includes(lowercasedTerm) ||
-      post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm)) ||
-      postComments.some(comment => 
-        comment.text.toLowerCase().includes(lowercasedTerm) ||
-        comment.userName.toLowerCase().includes(lowercasedTerm)
+      (selectedTags.length === 0 || post.tags.some(tag => selectedTags.includes(tag))) &&
+      (
+        post.postText.toLowerCase().includes(lowercasedTerm) ||
+        post.userName.toLowerCase().includes(lowercasedTerm) ||
+        post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm)) ||
+        postComments.some(comment => 
+          comment.text.toLowerCase().includes(lowercasedTerm) ||
+          comment.userName.toLowerCase().includes(lowercasedTerm)
+        )
       )
     );
   });
 
   const toggleMenu = () => setMenuVisible(prev => !prev);
-
-  const handleViewProfile = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
+  const openFilterModal = () => setFilterModalIsOpen(true);
+  const closeFilterModal = () => setFilterModalIsOpen(false);
+  const handleViewProfile = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
 
   return (
     <div className="home-container">
       <header className="header">
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className="search-input"
-          />
+        <FontAwesomeIcon icon={faHome} className="home-icon" />
+        <div className="search-container">
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              className="search-input"
+            />
+            <FontAwesomeIcon icon={faFilter} className="filter-icon" onClick={openFilterModal} />
+          </div>
         </div>
         <div className="profile-section">
           <div className="profile-photo" onClick={toggleMenu}>
-            <img src={auth.currentUser?.photoURL || ''} alt="Profile" />
+            <img src={auth.currentUser?.photoURL || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ99qCZ8-l1k3yR0IYmGyxdK53rphlOPpTbtQ&s'} alt="Profile" />
           </div>
           {menuVisible && (
             <div className="profile-menu">
@@ -167,12 +185,20 @@ const HomePage: React.FC = () => {
           <div key={index} className="post-container">
             <div className="post-header">
               <img src={post.userPhoto} alt={post.userName} className="user-photo" />
-              <span className="user-name" dangerouslySetInnerHTML={{ __html: highlightText(post.userName, searchTerm) }} />
+              <span
+                className="user-name"
+                dangerouslySetInnerHTML={{ __html: highlightText(post.userName, searchTerm) }}
+              />
             </div>
             {post.postImage && <img src={post.postImage} alt="Post" className="post-image" />}
-            <p className="post-text" dangerouslySetInnerHTML={{ __html: highlightText(post.postText, searchTerm) }} />
+            <p
+              className="post-text"
+              dangerouslySetInnerHTML={{ __html: highlightText(post.postText, searchTerm) }}
+            />
             <div className="post-footer">
-              <span className="tags">{post.tags.map(tag => highlightText(tag, searchTerm)).join(', ')}</span>
+              <span className="tags">
+                {post.tags.map(tag => highlightText(tag, searchTerm)).join(', ')}
+              </span>
               <span className="likes">Likes: {post.likes}</span>
               <span className="comments">Comments: {Object.keys(post.comments).length}</span>
             </div>
@@ -184,8 +210,12 @@ const HomePage: React.FC = () => {
                     <div key={commentId} className="comment">
                       <img src={comment.userPhoto} alt={comment.userName} className="comment-user-photo" />
                       <div className="comment-info">
-                        <h4 dangerouslySetInnerHTML={{ __html: highlightText(comment.userName, searchTerm) }} />
-                        <p dangerouslySetInnerHTML={{ __html: highlightText(comment.text, searchTerm) }} />
+                        <h4
+                          dangerouslySetInnerHTML={{ __html: highlightText(comment.userName, searchTerm) }}
+                        />
+                        <p
+                          dangerouslySetInnerHTML={{ __html: highlightText(comment.text, searchTerm) }}
+                        />
                       </div>
                     </div>
                   );
@@ -206,12 +236,37 @@ const HomePage: React.FC = () => {
       >
         <h2>Perfil de Usuario</h2>
         <div className="profile-info">
-          <img src={auth.currentUser?.photoURL || ''} alt="Profile" className="profile-image" />
+          <img src={auth.currentUser?.photoURL || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ99qCZ8-l1k3yR0IYmGyxdK53rphlOPpTbtQ&s'} alt="Profile" className="profile-image" />
           <p><strong>Nombre:</strong> {auth.currentUser?.displayName || 'No disponible'}</p>
           <p><strong>Email:</strong> {auth.currentUser?.email || 'No disponible'}</p>
           <p><strong>UID:</strong> {auth.currentUser?.uid || 'No disponible'}</p>
         </div>
         <button onClick={closeModal} className="close-modal-button">Cerrar</button>
+      </Modal>
+
+      {/* Modal for filtering posts */}
+      <Modal
+        isOpen={filterModalIsOpen}
+        onRequestClose={closeFilterModal}
+        contentLabel="Filter Posts"
+        className="modal"
+        overlayClassName="overlay"
+      >
+        <h2>Filtrar por Tags</h2>
+        <div className="filter-options">
+          {availableTags.map(tag => (
+            <div key={tag} className="filter-option">
+              <input
+                type="checkbox"
+                id={tag}
+                checked={selectedTags.includes(tag)}
+                onChange={() => handleTagChange(tag)}
+              />
+              <label htmlFor={tag}>{tag}</label>
+            </div>
+          ))}
+        </div>
+        <button onClick={closeFilterModal} className="close-modal-button">Cerrar</button>
       </Modal>
     </div>
   );
