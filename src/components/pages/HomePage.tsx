@@ -30,8 +30,8 @@ interface Post {
 
 Modal.setAppElement('#root');
 
-const highlightText = (text: string, searchTerm: string) => {
-  if (!searchTerm.trim()) return text;
+const highlightText = (text: string | undefined, searchTerm: string) => {
+  if (!text || !searchTerm.trim()) return text || '';
 
   const regex = new RegExp(`(${searchTerm.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi');
   return text.replace(regex, (match) => `<mark>${match}</mark>`);
@@ -114,16 +114,16 @@ const HomePage: React.FC = () => {
   const filteredPosts = posts.filter(post => {
     const lowercasedTerm = searchTerm.toLowerCase();
     const postComments = Object.values(post.comments);
-    
+  
     return (
       (selectedTags.length === 0 || post.tags.some(tag => selectedTags.includes(tag))) &&
       (
-        post.postText.toLowerCase().includes(lowercasedTerm) ||
-        post.userName.toLowerCase().includes(lowercasedTerm) ||
-        post.tags.some(tag => tag.toLowerCase().includes(lowercasedTerm)) ||
+        (post.postText && post.postText.toLowerCase().includes(lowercasedTerm)) ||
+        (post.userName && post.userName.toLowerCase().includes(lowercasedTerm)) ||
+        post.tags.some(tag => (tag && tag.toLowerCase().includes(lowercasedTerm))) ||
         postComments.some(comment => 
-          comment.text.toLowerCase().includes(lowercasedTerm) ||
-          comment.userName.toLowerCase().includes(lowercasedTerm)
+          (comment.text && comment.text.toLowerCase().includes(lowercasedTerm)) ||
+          (comment.userName && comment.userName.toLowerCase().includes(lowercasedTerm))
         )
       )
     );
