@@ -28,14 +28,6 @@ interface Post {
   comments: Record<string, Comment>;
 }
 
-interface User {
-  userId: string;
-  userName: string;
-  userPhoto: string;
-  email: string;
-  bio: string;
-}
-
 Modal.setAppElement('#root');
 
 const highlightText = (text: string, searchTerm: string) => {
@@ -49,7 +41,6 @@ const highlightText = (text: string, searchTerm: string) => {
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();
   const [posts, setPosts] = useState<Post[]>([]);
-  const [users, setUsers] = useState<Record<string, User>>({});
   const [searchTerm, setSearchTerm] = useState('');
   const [menuVisible, setMenuVisible] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -59,7 +50,6 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     const postsRef = ref(database, 'posts/');
-    const usersRef = ref(database, 'users/');
     
     const handlePostsData = (snapshot: any) => {
       const data = snapshot.val() || {};
@@ -80,17 +70,10 @@ const HomePage: React.FC = () => {
       setPosts(postsArray);
     };
 
-    const handleUsersData = (snapshot: any) => {
-      const data = snapshot.val() || {};
-      setUsers(data);
-    };
-
     const postsUnsubscribe = onValue(postsRef, handlePostsData);
-    const usersUnsubscribe = onValue(usersRef, handleUsersData);
 
     return () => {
       postsUnsubscribe();
-      usersUnsubscribe();
     };
   }, []);
 
