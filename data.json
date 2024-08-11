@@ -310,116 +310,129 @@
       "comments": {
         "comment1": {
           "commentId": "1",
-          "userId": "18",
+          "userId": "13",
+          "userName": "Santiado Cruz",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen0a57b853b862503046ce9c8c38970c0d.jpg",
+          "text": "Ohh que interesantes combinaciones."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "14",
+          "userName": "Danil Sandoval",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-genf3ea3fd3159f3f3f6757f080d1fc0a0b.jpg",
+          "text": "No me gustan estan muy anticuadas."
+        }
+      }
+    },
+    "post7": {
+      "userId": "18",
+      "userName": "Ava Lee",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVk7iSTR3maFjxm2VBQRm3MIOfc4WJAgfKQw&s",
+      "postText": "Cómo mejorar tu salud mental: consejos prácticos y efectivos.",
+      "tags": [
+        "salud",
+        "bienestar"
+      ],
+      "likes": 590,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "20",
+          "userName": "Isabella Scott",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7f02a2a02b6f46121f161ef20ede876a.jpg",
+          "text": "Muy útil. Siempre es bueno tener estrategias para cuidar nuestra salud mental."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "21",
+          "userName": "Danna Wilson",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen63cb16d668b8c7c84a755fc3a4450b7b.jpg",
+          "text": "Gracias por compartir estos consejos. Los pondré en práctica."
+        }
+      }
+    },
+    "post8": {
+      "userId": "8",
+      "userName": "Vanessa Martinez",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7089e47bdf8a78cedde09ff97f723f0a.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrNNiyIrNNjPslLaMGeyce_BOj_ccmXsy7w&s",
+      "postText": "Las mejores estrategias para invertir en criptomonedas en 2024.",
+      "tags": [
+        "finanzas",
+        "criptomonedas"
+      ],
+      "likes": 903,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "22",
+          "userName": "Daniel Green",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8534a5433aa562d01b511a05d0710b68.jpg",
+          "text": "Muy interesante. Estoy buscando formas de diversificar mi cartera de inversiones."
+        },
+        "comment2": {
+          "commentId": "2",
+          "userId": "23",
           "userName": "Ava Lee",
           "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
-          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVk7iSTR3maFjxm2VBQRm3MIOfc4WJAgfKQw&s",
-          "postText": "Cómo mejorar tu salud mental: consejos prácticos y efectivos.",
-          "tags": [
-            "salud",
-            "bienestar"
-          ],
-          "likes": 590,
-          "comments": {
-            "comment1": {
-              "commentId": "1",
-              "userId": "20",
-              "userName": "Isabella Scott",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7f02a2a02b6f46121f161ef20ede876a.jpg",
-              "text": "Muy útil. Siempre es bueno tener estrategias para cuidar nuestra salud mental."
-            },
-            "comment2": {
-              "commentId": "2",
-              "userId": "21",
-              "userName": "Danna Wilson",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen63cb16d668b8c7c84a755fc3a4450b7b.jpg",
-              "text": "Gracias por compartir estos consejos. Los pondré en práctica."
-            }
-          }
+          "text": "Gracias por la información. Consideraré invertir en criptomonedas."
+        }
+      }
+    },
+    "post9": {
+      "userId": "9",
+      "userName": "Liam Harris",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gena9137af94498a7db3285c53c5bd8adf2.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIY2E0QMsFvZMm3T76DOfLXs7Lz65Jht3rQ&s",
+      "postText": "Cómo mejorar tus habilidades de fotografía con consejos simples.",
+      "tags": [
+        "fotografía",
+        "arte"
+      ],
+      "likes": 654,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "24",
+          "userName": "Mia Clark",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen9994c9188aab417f533c1d8918507379.jpg",
+          "text": "Muy buenos consejos. Estoy tratando de mejorar mis habilidades de fotografía."
         },
-        "post8": {
-          "userId": "8",
-          "userName": "Vanessa Martinez",
-          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen7089e47bdf8a78cedde09ff97f723f0a.jpg",
-          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrNNiyIrNNjPslLaMGeyce_BOj_ccmXsy7w&s",
-          "postText": "Las mejores estrategias para invertir en criptomonedas en 2024.",
-          "tags": [
-            "finanzas",
-            "criptomonedas"
-          ],
-          "likes": 903,
-          "comments": {
-            "comment1": {
-              "commentId": "1",
-              "userId": "22",
-              "userName": "Daniel Green",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen8534a5433aa562d01b511a05d0710b68.jpg",
-              "text": "Muy interesante. Estoy buscando formas de diversificar mi cartera de inversiones."
-            },
-            "comment2": {
-              "commentId": "2",
-              "userId": "23",
-              "userName": "Ava Lee",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen443fd842e19b710e681d6b32f83ed5d5.jpg",
-              "text": "Gracias por la información. Consideraré invertir en criptomonedas."
-            }
-          }
+        "comment2": {
+          "commentId": "2",
+          "userId": "25",
+          "userName": "Noah Wright",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen366e96d46f3e6e8ce732dd10da5748b7.jpg",
+          "text": "Gracias por los tips. Me han sido muy útiles."
+        }
+      }
+    },
+    "post10": {
+      "userId": "10",
+      "userName": "Sophia Adams",
+      "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen69b2c7ad56fccbe7abfb26f4a2b82c86.jpg",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwrtkLhYFA-OXO0JFalcC7mSFFmVEJKYs5Q&s",
+      "postText": "Las mejores técnicas para aprender un nuevo idioma rápidamente.",
+      "tags": [
+        "idiomas",
+        "educación"
+      ],
+      "likes": 732,
+      "comments": {
+        "comment1": {
+          "commentId": "1",
+          "userId": "26",
+          "userName": "Ethan Johnson",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen5aef0537ec09d584a9fba179a9cb441f.jpg",
+          "text": "¡Gran información! Estoy buscando métodos efectivos para aprender francés."
         },
-        "post9": {
-          "userId": "9",
-          "userName": "Liam Harris",
-          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gena9137af94498a7db3285c53c5bd8adf2.jpg",
-          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIY2E0QMsFvZMm3T76DOfLXs7Lz65Jht3rQ&s",
-          "postText": "Cómo mejorar tus habilidades de fotografía con consejos simples.",
-          "tags": [
-            "fotografía",
-            "arte"
-          ],
-          "likes": 654,
-          "comments": {
-            "comment1": {
-              "commentId": "1",
-              "userId": "24",
-              "userName": "Mia Clark",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen9994c9188aab417f533c1d8918507379.jpg",
-              "text": "Muy buenos consejos. Estoy tratando de mejorar mis habilidades de fotografía."
-            },
-            "comment2": {
-              "commentId": "2",
-              "userId": "25",
-              "userName": "Noah Wright",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen366e96d46f3e6e8ce732dd10da5748b7.jpg",
-              "text": "Gracias por los tips. Me han sido muy útiles."
-            }
-          }
-        },
-        "post10": {
-          "userId": "10",
-          "userName": "Sophia Adams",
-          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen69b2c7ad56fccbe7abfb26f4a2b82c86.jpg",
-          "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwrtkLhYFA-OXO0JFalcC7mSFFmVEJKYs5Q&s",
-          "postText": "Las mejores técnicas para aprender un nuevo idioma rápidamente.",
-          "tags": [
-            "idiomas",
-            "educación"
-          ],
-          "likes": 732,
-          "comments": {
-            "comment1": {
-              "commentId": "1",
-              "userId": "26",
-              "userName": "Ethan Johnson",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen5aef0537ec09d584a9fba179a9cb441f.jpg",
-              "text": "¡Gran información! Estoy buscando métodos efectivos para aprender francés."
-            },
-            "comment2": {
-              "commentId": "2",
-              "userId": "27",
-              "userName": "Daniel Robinson",
-              "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen4d441a43cb4b5598f1bc241c4121a906.jpg",
-              "text": "Gracias por estos consejos. Me ayudarán mucho en mi aprendizaje."
-            }
-          }
+        "comment2": {
+          "commentId": "2",
+          "userId": "27",
+          "userName": "Daniel Robinson",
+          "userPhoto": "https://this-person-does-not-exist.com/img/avatar-gen4d441a43cb4b5598f1bc241c4121a906.jpg",
+          "text": "Gracias por estos consejos. Me ayudarán mucho en mi aprendizaje."
         }
       }
     }

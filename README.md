@@ -29,11 +29,11 @@
 ### -Retroalimentación positiva: Notificaciones de éxito tras un inicio de sesión exitoso.
 ### -Estilo personalizable: Diseñado con CSS modular que puedes personalizar según tus necesidades.
 
-![alt text](<Captura de pantalla 2024-08-10 104407.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 104407.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105408.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105408.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105449.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105449.png>)
 
 
 ## Componente HomePage
@@ -49,15 +49,15 @@
 ### -Gestión del Perfil: Muestra un modal con información del perfil del usuario y la opción de cerrar sesión.
 ### -Interacción de Usuario: Utiliza SweetAlert2 para confirmar acciones importantes como el cierre de sesión.
 
-![alt text](<Captura de pantalla 2024-08-10 104651.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 104651.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105002.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105002.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105038.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105038.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105235.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105235.png>)
 
-![alt text](<Captura de pantalla 2024-08-10 105318.png>)
+![alt text](<imagenes/Captura de pantalla 2024-08-10 105318.png>)
 
 
 ## Conclusiones
